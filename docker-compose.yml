@@ -1,0 +1,7 @@
+radicale:
+  build: dockerfiles/radicale
+  ports:
+    - "5232:5232"
+  environment:
+    RADICALE_CONFIG: /opt/radicale/config
+  command: radicale
