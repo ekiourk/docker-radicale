@@ -124,7 +124,7 @@ filesystem_folder = ~/.config/radicale/collections
 # dialect+driver://user:password@host/dbname[?key=value..]
 # For example: sqlite:///var/db/radicale.db, postgresql://user:password@localhost/radicale
 # See http://docs.sqlalchemy.org/en/rel_0_8/core/engines.html#sqlalchemy.create_engine
-database_url =
+database_url = postgresql://radicale:radicale@$DB_PORT_5432_TCP_ADDR:$DB_PORT_5432_TCP_PORT/radicale
 
 
 [logging]

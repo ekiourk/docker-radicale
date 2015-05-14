@@ -2,6 +2,15 @@ radicale:
   build: dockerfiles/radicale
   ports:
     - "5232:5232"
+  links:
+   - db
   environment:
     RADICALE_CONFIG: /opt/radicale/config
-  command: radicale
+  command: radicale --debug
+db:
+  image: postgres
+  ports:
+   - "5432:5432"
+  environment:
+  - POSTGRES_USER=radicale
+  - POSTGRES_PASSWORD=radicale
